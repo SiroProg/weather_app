@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:weather_app/pages/home_page/widgets/custom_app_bar.dart';
 
 import '../../styles/app_colors.dart';
+import 'widgets/location_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,7 +14,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: DecoratedBox(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -24,8 +25,10 @@ class _HomePageState extends State<HomePage> {
         ),
         child: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CustomAppBar(),
+              LocationView(),
             ],
           ),
         ),

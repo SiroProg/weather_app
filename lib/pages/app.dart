@@ -11,6 +11,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
+        fontFamily: "Inter",
       ),
       title: "Weather G8",
       home: const HomePage(),
