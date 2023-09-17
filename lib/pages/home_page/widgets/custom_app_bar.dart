@@ -16,8 +16,8 @@ class CustomAppBar extends StatelessWidget {
           IconButton(
             onPressed: () {},
             icon: const Image(
-              width: 24,
-              height: 24,
+              width: 28,
+              height: 28,
               image: AssetImage(AppIcons.icSearch),
             ),
           ),
@@ -60,7 +60,7 @@ class CustomAppBar extends StatelessWidget {
             icon: const Image(
               width: 22,
               height: 22,
-              image: AssetImage(AppIcons.icSearch),
+              image: AssetImage(AppIcons.icMenu),
             ),
           ),
         ],

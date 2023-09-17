@@ -17,7 +17,7 @@ class LocationView extends StatelessWidget {
             const Text(
               "Toshkent, Uzbekistan",
               style: TextStyle(
-                fontSize: 35,
+                fontSize: 39,
                 fontWeight: FontWeight.w500,
               ),
             ),
