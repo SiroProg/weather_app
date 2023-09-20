@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/pages/controller/main_controller.dart';
 import 'package:weather_app/pages/home_page/widgets/custom_app_bar.dart';
 
 import '../../styles/app_colors.dart';
@@ -16,6 +17,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  late final MainController controller;
+  _HomePageState() {
+    controller = MainController(setState);
+    controller.getApiData();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,13 +35,13 @@ class _HomePageState extends State<HomePage> {
         ),
         child: SafeArea(
           child: ListView(
-            children: const [
-              CustomAppBar(),
-              LocationView(),
-              WeatherCelsius(),
-              WeatherInfo(),
-              ScheduleOfWeek(),
-              HourlyWeather(),
+            children: [
+              const CustomAppBar(),
+              LocationView(controller: controller),
+              const WeatherCelsius(),
+              const WeatherInfo(),
+              const ScheduleOfWeek(),
+              const HourlyWeather(),
             ],
           ),
         ),

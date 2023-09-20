@@ -11,7 +11,7 @@ class WeatherModel {
   final double? tzoffset;
   final String? description;
   final List<Day> days;
-  final List<dynamic> alerts;
+  final List<Object?> alerts;
   final CurrentConditions? currentConditions;
 
   WeatherModel({
@@ -29,7 +29,7 @@ class WeatherModel {
   });
 
   factory WeatherModel.fromJson(Map<String, Object?> json) {
-   if (json.containsKey("queryCost") &&
+    if (json.containsKey("queryCost") &&
         json.containsKey("latitude") &&
         json.containsKey("longitude") &&
         json.containsKey("resolvedAddress") &&
@@ -39,7 +39,7 @@ class WeatherModel {
         json.containsKey("description") &&
         json.containsKey("days") &&
         json.containsKey("alerts") &&
-        json.containsKey("currentConditions" )) {
+        json.containsKey("currentConditions")) {
       return WeatherModel(
         queryCost: json["queryCost"] as int?,
         latitude: json["latitude"] as double?,
@@ -49,12 +49,13 @@ class WeatherModel {
         timezone: json["timezone"] as String?,
         tzoffset: json["tzoffset"] as double?,
         description: json["description"] as String?,
-        days: (json["days"] as List<dynamic>)
-            .map((e) => Day.fromJson(e as Map<String, dynamic>))
+        days: (json["days"] as List<Object?>)
+            .map((e) => Day.fromJson(e as Map<String, Object?>))
             .toList(),
-        alerts: json["alerts"] as List<dynamic>,
+        alerts: json["alerts"] as List<Object?>,
         currentConditions: CurrentConditions.fromJson(
-            json["currentConditions"] as Map<String, dynamic>),
+          json["currentConditions"] as Map<String, Object?>,
+        ),
       );
     } else {
       throw Error.throwWithStackTrace(

@@ -1,0 +1,39 @@
+{
+    "ip": "54.86.50.139",
+    "continent_code": "NA",
+    "continent_name": "North America",
+    "country_code2": "US",
+    "country_code3": "USA",
+    "country_name": "United States",
+    "country_capital": "Washington, D.C.",
+    "state_prov": "Virginia",
+    "state_code": "US-VA",
+    "district": "",
+    "city": "North",
+    "zipcode": "23128",
+    "latitude": "37.45243",
+    "longitude": "-76.41686",
+    "is_eu": false,
+    "calling_code": "+1",
+    "country_tld": ".us",
+    "languages": "en-US,es-US,haw,fr",
+    "country_flag": "https://ipgeolocation.io/static/flags/us_64.png",
+    "geoname_id": "4745817",
+    "isp": "Amazon Technologies Inc. (EC2)",
+    "connection_type": "",
+    "organization": "Amazon.com, Inc.",
+    "currency": {
+        "code": "USD",
+        "name": "US Dollar",
+        "symbol": "$"
+    },
+    "time_zone": {
+        "name": "America/New_York",
+        "offset": -5,
+        "offset_with_dst": -4,
+        "current_time": "2023-09-18 02:51:03.871-0400",
+        "current_time_unix": 1695019863.871,
+        "is_dst": true,
+        "dst_savings": 1
+    }
+}

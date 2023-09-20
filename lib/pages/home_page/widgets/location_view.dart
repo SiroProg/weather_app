@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/pages/controller/main_controller.dart';
 import 'package:weather_app/styles/app_colors.dart';
 import 'package:weather_app/utils/time_extensions.dart';
 
 class LocationView extends StatelessWidget {
-  const LocationView({super.key});
+  final MainController controller;
+  const LocationView({required this.controller, super.key});
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -14,9 +16,9 @@ class LocationView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              "Toshkent, Uzbekistan",
-              style: TextStyle(
+            Text(
+              controller.data?.resolvedAddress ?? "",
+              style: const TextStyle(
                 fontSize: 39,
                 fontWeight: FontWeight.w500,
               ),

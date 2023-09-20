@@ -122,7 +122,6 @@ class Day {
           .toList(),
     );
   }
-
   @override
   String toString() {
     return 'Day(datetime: $datetime, datetimeEpoch: $datetimeEpoch, tempmax: $tempmax, tempmin: $tempmin, temp: $temp, feelslikemax: $feelslikemax, feelslikemin: $feelslikemin, feelslike: $feelslike, dew: $dew, humidity: $humidity, precip: $precip, precipprob: $precipprob, precipcover: $precipcover, preciptype: $preciptype, snow: $snow, snowdepth: $snowdepth, windgust: $windgust, windspeed: $windspeed, winddir: $winddir, pressure: $pressure, cloudcover: $cloudcover, visibility: $visibility, solarradiation: $solarradiation, solarenergy: $solarenergy, uvindex: $uvindex, severerisk: $severerisk, sunrise: $sunrise, sunriseEpoch: $sunriseEpoch, sunset: $sunset, sunsetEpoch: $sunsetEpoch, moonphase: $moonphase, conditions: $conditions, description: $description, icon: $icon, stations: $stations, source: $source, hours: $hours)';
